@@ -1,0 +1,36 @@
+************* Crash Head ****************
+Time Of Crash      : 2024_07_18-19_48_35
+Device Manufacturer: OPPO
+Device Model       : CPH2359
+Android Version    : 14
+Android SDK        : 34
+App VersionName    : 1.8
+App VersionCode    : 9
+************* Crash Head ****************
+
+java.lang.RuntimeException: Unable to start service com.slipkprojects.ultrasshservice.SocksHttpService@7ed222e with Intent { cmp=app.spicyvpn.net/com.slipkprojects.ultrasshservice.SocksHttpService }: android.app.MissingForegroundServiceTypeException: Starting FGS without a type  callerApp=ProcessRecord{257644f 13951:app.spicyvpn.net/u0a654} targetSDK=34
+	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:5121)
+	at android.app.ActivityThread.-$$Nest$mhandleServiceArgs(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2472)
+	at android.os.Handler.dispatchMessage(Handler.java:106)
+	at android.os.Looper.loopOnce(Looper.java:257)
+	at android.os.Looper.loop(Looper.java:368)
+	at android.app.ActivityThread.main(ActivityThread.java:8826)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:572)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1049)
+Caused by: android.app.MissingForegroundServiceTypeException: Starting FGS without a type  callerApp=ProcessRecord{257644f 13951:app.spicyvpn.net/u0a654} targetSDK=34
+	at android.app.MissingForegroundServiceTypeException$1.createFromParcel(MissingForegroundServiceTypeException.java:53)
+	at android.app.MissingForegroundServiceTypeException$1.createFromParcel(MissingForegroundServiceTypeException.java:49)
+	at android.os.Parcel.readParcelableInternal(Parcel.java:4900)
+	at android.os.Parcel.readParcelable(Parcel.java:4882)
+	at android.os.Parcel.createExceptionOrNull(Parcel.java:3082)
+	at android.os.Parcel.createException(Parcel.java:3071)
+	at android.os.Parcel.readException(Parcel.java:3054)
+	at android.os.Parcel.readException(Parcel.java:2996)
+	at android.app.IActivityManager$Stub$Proxy.setServiceForeground(IActivityManager.java:6761)
+	at android.app.Service.startForeground(Service.java:775)
+	at com.slipkprojects.ultrasshservice.SocksHttpService.l(SourceFile:185)
+	at com.slipkprojects.ultrasshservice.SocksHttpService.onStartCommand(Unknown Source:49)
+	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:5103)
+	... 9 more
